@@ -1,0 +1,8 @@
+Karina Andrea;Epullanca;Melo;Chilena;15.456.852-7;García Hurtado de Mendoza;771;LLanquihue;PUERTO_MONTT;A2;Zona Histórica;false;false
+Constanza Graciela;Arroyo;Donoso;Chilena;18.419.784-9;Clemente Horn;30;Puerto Varas;PUERTO_MONTT;B1;Ecoturismo;false;false
+José Ignacio;Caceres;Lopez;Chilena;15.277.712-7;Errázuriz;200;Frutillar;PUERTO_MONTT;C2;Alta Montaña;true;true
+Carlos Alberto;Soto;Pérez;Chilena;17.123.456-K;San Bernardo;150;Puerto Varas;PUERTO_MONTT;B2;Turismo Aventura;true;true
+María Fernanda;Ríos;Silva;Chilena;19.987.654-3;Antonio Varas;1024;Puerto Montt;PUERTO_MONTT;C1;Observación de Aves;true;false
+Luis Felipe;Valenzuela;Torres;Chilena;16.543.210-K;Av. Los Colonos;405;Puerto Varas;PUERTO_MONTT;B2;Fotografía de Naturaleza;true;false
+Camila Paz;Oyarzún;Cárdenas;Chilena;18.987.123-5;Costanera;102;Frutillar;PUERTO_MONTT;C1;Patrimonio Cultural;true;true
+Andrés Eduardo;Martínez;Soto;Chilena;14.321.987-1;San José;88;Puerto Octay;PUERTO_MONTT;A2;Pesca Deportiva;false;false

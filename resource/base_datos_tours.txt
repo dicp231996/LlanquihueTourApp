@@ -1,0 +1,8 @@
+8;30;12;0;Saltos del Petrohué;11222333-4;false;25000;false;PRINCIPIANTE
+9;0;18;30;Circuito Cuenca del Lago Llanquihue;22333444-5;false;35000;false;INTERMEDIO
+6;0;19;0;Ascenso al Volcán Calbuco;33444555-6;true;55000;true;AVANZADO
+15;45;18;15;Teatro del Lago y Frutillar;44555666-7;false;18000;false;PRINCIPIANTE
+10;15;14;45;Navegación Lago Todos los Santos;55666777-8;false;30000;false;PRINCIPIANTE
+8;0;10;30;Monumento a los colonos Alemanes;19876543-2;false;15000;false;PRINCIPIANTE
+10;30;13;30;Humedal el Loto;15444333-K;false;12000;false;PRINCIPIANTE
+13;30;16;0;Ascenso al volcán Osorno;12345678-9;true;45000;true;AVANZADO
