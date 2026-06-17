@@ -3,7 +3,7 @@ package ui;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.random.*;
+import java.util.Scanner;
 
 import data.GestionFiltro;
 import model.entities.GuiaTuristico;
@@ -15,13 +15,17 @@ import model.valueobjects.Direccion.Region;
 import model.valueobjects.GrupoTuristico;
 import data.GestorDatos;
 
+import util.GestorRegistro;
+import util.AgregarRegistro;
+import util.TipoEntidad;
+
 /**
  * Clase principal que actúa como punto de entrada de la aplicación LlanquihueTour.
  * Simula un sistema de gestión turística, instanciando guías, turistas y grupos de viaje
  * mediante datos de prueba ("Pseudo bases de datos"), para luego mostrar un resumen de los
  * grupos y sus participantes en consola.
  * @author Daniel Campos
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 public class LlanquihueTour {
@@ -100,17 +104,26 @@ public class LlanquihueTour {
         ArrayList<GrupoTuristico> tourAvanzado = GestionFiltro.filtrar(baseDatosGruposTuristicos,
                 grupo -> grupo.getDificultad() == GrupoTuristico.Dificultad.AVANZADO);
 
-        //Salida de datos
+        //Agregar registro
 
-        System.out.println("==== Registro grupos turisticos ====\n");
-        
-        for (int i=0; i < tourAvanzado.size(); i++) {
-            System.out.println("Grupo " + (i + 1));
-            System.out.println(tourAvanzado.get(i).toString());
-            System.out.println("----------------------------------------");
+        Scanner registros = new Scanner(System.in);
+
+        TipoEntidad destinoSeleccionado = AgregarRegistro.seleccionarEntidad(registros);
+
+        if (destinoSeleccionado != null) {
+            GestorRegistro.registrarNuevaEntidad(destinoSeleccionado,registros);
         }
 
 
+
+        //Salida de datos
+
+//        System.out.println("==== Registro grupos turisticos ====\n");
+//
+//        for (int i=0; i < tourAvanzado.size(); i++) {
+//            System.out.println("Grupo " + (i + 1));
+//            System.out.println(tourAvanzado.get(i).toString());
+//            System.out.println("----------------------------------------");
+//        }
     }
-    
 }

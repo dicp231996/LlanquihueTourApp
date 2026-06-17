@@ -2,7 +2,6 @@ package model.entities;
 
 import model.core.Persona;
 import model.valueobjects.Direccion;
-import model.valueobjects.GrupoTuristico;
 import model.valueobjects.Rut;
 
 /**
