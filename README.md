@@ -27,11 +27,12 @@ src/
 |       └──Rut.java
 |── util/
 |   ├── core/
+|   |   |── io/
+|   |   |   |── GestorValidaciones.java
+|   |   |   └── EscritorBaseDatos.java  
 |   |   |── TipoEntidad.java
 |   |   |── TipoDato.java
-|   |   |── Campo.java
-|   |   |── GestorValidaciones.java
-|   |   └── EscritorBaseDatos.java   
+|   |   └── Campo.java 
 |   ├── adddata/
 |   |    └── AgregarRegistro.java
 |   └── removedata/
