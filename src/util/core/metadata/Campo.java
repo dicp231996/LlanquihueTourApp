@@ -1,4 +1,4 @@
-package util;
+package util.core.metadata;
 
 public class Campo {
     private String pregunta;

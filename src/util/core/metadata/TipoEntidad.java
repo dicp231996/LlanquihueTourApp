@@ -1,9 +1,9 @@
-package util;
+package util.core.metadata;
 
 public enum TipoEntidad {
 
-    TURISTA("resource/base_datos_guias_turisticos.txt", new Campo[]{
-            new Campo("Nombres",TipoDato.TEXTO_LIBRE),
+    TURISTA("resource/base_datos_turistas.txt", new Campo[]{
+            new Campo("Nombres", TipoDato.TEXTO_LIBRE),
             new Campo("Apellido Paterno",TipoDato.TEXTO_LIBRE),
             new Campo("Apellido Materno",TipoDato.TEXTO_LIBRE),
             new Campo("Nacionalidad",TipoDato.TEXTO_LIBRE),
@@ -16,7 +16,7 @@ public enum TipoEntidad {
             new Campo("Días de reserva",TipoDato.NUMERO_ENTERO)
     }),
 
-    GUIA("resource/base_datos_tours.txt", new Campo[]{
+    GUIA("resource/base_datos_guias_turisticos.txt", new Campo[]{
             new Campo("Nombres",TipoDato.TEXTO_LIBRE),
             new Campo("Apellido Paterno",TipoDato.TEXTO_LIBRE),
             new Campo("Apellido Materno",TipoDato.TEXTO_LIBRE),
@@ -31,7 +31,7 @@ public enum TipoEntidad {
             new Campo("Capacitado para realizar rescate",TipoDato.BOOLEAN)
     }),
 
-    GRUPO("resource/base_datos_turistas.txt", new Campo[]{
+    GRUPO("resource/base_datos_tours.txt", new Campo[]{
             new Campo("Hora inicio (entre 0 a 23)",TipoDato.HORA),
             new Campo("Minuto inicio (entre 0 a 59)",TipoDato.MINUTO),
             new Campo("Hora termino (entre 0 a 23)",TipoDato.HORA),

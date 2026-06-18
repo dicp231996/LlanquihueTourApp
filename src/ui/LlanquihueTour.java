@@ -15,9 +15,9 @@ import model.valueobjects.Direccion.Region;
 import model.valueobjects.GrupoTuristico;
 import data.GestorDatos;
 
-import util.GestorRegistro;
-import util.AgregarRegistro;
-import util.TipoEntidad;
+import util.adddata.GestorRegistro;
+import util.adddata.AgregarRegistro;
+import util.core.metadata.TipoEntidad;
 
 /**
  * Clase principal que actúa como punto de entrada de la aplicación LlanquihueTour.

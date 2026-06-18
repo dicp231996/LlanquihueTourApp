@@ -1,4 +1,6 @@
-package util;
+package util.adddata;
+
+import util.core.metadata.TipoEntidad;
 
 import java.util.Scanner;
 

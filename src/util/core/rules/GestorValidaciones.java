@@ -1,9 +1,9 @@
-package util;
+package util.core.rules;
 
 import model.valueobjects.Direccion.Region;
 import model.valueobjects.GrupoTuristico.Dificultad;
 import model.entities.GuiaTuristico.NivelDeIngles;
-import static util.TipoDato.TEXTO_LIBRE;
+import util.core.metadata.TipoDato;
 
 public class GestorValidaciones {
 

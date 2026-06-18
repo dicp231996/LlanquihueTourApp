@@ -1,4 +1,4 @@
-package util;
+package util.core.metadata;
 
 public enum TipoDato {
     TEXTO_LIBRE,

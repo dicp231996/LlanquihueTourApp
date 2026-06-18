@@ -28,3 +28,4 @@ Daniela Andrea;Bravo;Pardo;Chilena;21.777.888-9;San Jose;555;Arica;ARICA;E503;3
 Ignacio Javier;Vargas;Maldonado;Chilena;22.888.999-0;Independencia;666;Punta Arenas;PUNTA_ARENAS;F603;4
 Paula Antonia;Sepulveda;Gajardo;Chilena;12.999.000-1;Victoria;777;Valparaíso;VALPARAISO;A104;5
 Tomas Eduardo;Bustos;Oyarzun;Chilena;13.000.111-2;Colon;888;Talca;MAULE;B204;2
+Daniel Ignacio;Campos;Pérez;Chilena;19.284.616-1;Gonzalo Bulnes;2544;Quinta Normal;SANTIAGO;E500;15
