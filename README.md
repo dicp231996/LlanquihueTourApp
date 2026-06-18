@@ -17,14 +17,26 @@ src/
 |   └── GestorDatos.java
 ├── model/
 │   ├── core/
-|   |   |── Persona.java
+|   |   └── Persona.java
 │   ├── entities/
 |   |   |── GuiaTuristico.java
 |   |   └──Turista.java
-│   |── valueobjects/
+│   └── valueobjects/
 |       |── Direccion.java
 |       |── GrupoTuristico.java
 |       └──Rut.java
+|── util/
+|   ├── core/
+|   |   |── io/
+|   |   |   |── GestorValidaciones.java
+|   |   |   └── EscritorBaseDatos.java  
+|   |   |── TipoEntidad.java
+|   |   |── TipoDato.java
+|   |   └── Campo.java 
+|   ├── adddata/
+|   |    └── AgregarRegistro.java
+|   └── removedata/
+|       └── QuitarRegistro.java
 └── ui/
     └── LlanquihueTour.java
  
