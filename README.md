@@ -7,7 +7,7 @@ Versión 1.1.0 de la aplicación para Llanquihue tour, se añaden clase que perm
 Proyecto Java orientado a objetos para representar la compocision y herencia de clases
  
 ## Estructura
-resourse/
+resourses/
 |── base_datos_guias_turisticos.txt
 |── base_datos_tours.txt
 └──base_datos_turistas.txt
@@ -27,16 +27,19 @@ src/
 |       └──Rut.java
 |── util/
 |   ├── core/
-|   |   |── io/
-|   |   |   |── GestorValidaciones.java
-|   |   |   └── EscritorBaseDatos.java  
-|   |   |── TipoEntidad.java
-|   |   |── TipoDato.java
-|   |   └── Campo.java 
+|   |   |── metadata/
+|   |   |    |── TipoEntidad.java
+|   |   |    |── TipoDato.java
+|   |   |    └── Campo.java 
+|   |   |── rules/
+|   |   |    └── GestorValidaciones.java
+|   |   └── ui/
+|   |        └── SelectorBaseDatos.java  
 |   ├── adddata/
 |   |    └── AgregarRegistro.java
-|   └── removedata/
-|       └── QuitarRegistro.java
+|   |── removedata/
+|   |    └── QuitarRegistro.java
+|   └── MenuPrincipal.java  
 └── ui/
     └── LlanquihueTour.java
  
