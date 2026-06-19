@@ -15,7 +15,7 @@ public class GestorValidaciones {
 
         switch (tipo) {
             case TEXTO_LIBRE:
-                return entrada.matches("^[a-zA-ZáéíóúÁÉÍÓÚnÑ\\d\\s]+$");
+                return entrada.matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\d\\s]+$");
             case RUT:
                 return entrada.matches("^\\d{1,3}\\.\\d{3}\\.\\d{3}-[0-9Kk]$");
             case BOOLEAN:

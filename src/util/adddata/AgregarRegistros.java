@@ -3,18 +3,17 @@ package util.adddata;
 import util.core.metadata.Campo;
 import util.core.metadata.TipoDato;
 import util.core.metadata.TipoEntidad;
-import util.core.io.EscritorBaseDatos;
+import data.GestorDatos;
 import util.core.rules.GestorValidaciones;
 
 import java.util.Scanner;
 
-public class GestorRegistro {
+public class AgregarRegistros {
 
     public static void registrarNuevaEntidad(TipoEntidad tipoEntidad, Scanner teclado) {
         System.out.println("\n====== Realizar un registro de un " + tipoEntidad.name().toLowerCase() + " ======");
         StringBuilder registroCompleto = new StringBuilder();
         Campo[] esquema = tipoEntidad.getEsquemaDatos();
-        registroCompleto.append("\n");
 
         for (int i = 0; i < esquema.length; i++) {
             Campo campoRegistro = esquema[i];
@@ -42,6 +41,6 @@ public class GestorRegistro {
                 registroCompleto.append(";");
             }
         }
-        EscritorBaseDatos.guardarRegistro(tipoEntidad.getRutaArchivo(), registroCompleto.toString());
+        GestorDatos.guardarRegistro(tipoEntidad.getRutaArchivo(), registroCompleto.toString());
     }
 }

@@ -43,6 +43,7 @@ public enum TipoEntidad {
             new Campo("Dificultad del recorrido",TipoDato.DIFICULTAD)
     });
 
+    public static String getRutaArchivo;
     private final String rutaArchivo;
     private final Campo[] esquemaDatos;
 

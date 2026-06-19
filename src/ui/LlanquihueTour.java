@@ -14,10 +14,9 @@ import model.valueobjects.Rut;
 import model.valueobjects.Direccion.Region;
 import model.valueobjects.GrupoTuristico;
 import data.GestorDatos;
-
-import util.adddata.GestorRegistro;
-import util.adddata.AgregarRegistro;
+import util.MenuPrincipal;
 import util.core.metadata.TipoEntidad;
+
 
 /**
  * Clase principal que actúa como punto de entrada de la aplicación LlanquihueTour.
@@ -43,7 +42,7 @@ public class LlanquihueTour {
 
         //Creacion de instancias de guías turisticos
 
-        var lineasGuiasTuristicosDB = GestorDatos.cargarDatos("base_datos_guias_turisticos.txt");
+        var lineasGuiasTuristicosDB = GestorDatos.cargarDatos(TipoEntidad.GUIA.getRutaArchivo());
         var datosGuiasTuristicos = GestorDatos.registroInstancias(lineasGuiasTuristicosDB);
 
         ArrayList<GuiaTuristico> baseDatosGuias = new ArrayList<>();
@@ -60,7 +59,7 @@ public class LlanquihueTour {
 
         //Creacion de instancias de grupos turisticos
 
-        var lineasGruposTuristicosDB = GestorDatos.cargarDatos("base_datos_tours.txt");
+        var lineasGruposTuristicosDB = GestorDatos.cargarDatos(TipoEntidad.GRUPO.getRutaArchivo());
         var datosGruposTours = GestorDatos.registroInstancias(lineasGruposTuristicosDB);
         
         ArrayList<GrupoTuristico> baseDatosGruposTuristicos = new ArrayList<>();
@@ -76,7 +75,7 @@ public class LlanquihueTour {
 
         //Creación de instancias de turistas
 
-        var lineasTuristasDB = GestorDatos.cargarDatos("base_datos_turistas.txt");
+        var lineasTuristasDB = GestorDatos.cargarDatos(TipoEntidad.TURISTA.getRutaArchivo());
         var DatosTuristas = GestorDatos.registroInstancias(lineasTuristasDB);
         
         ArrayList<Turista> baseDatosTuristas = new ArrayList<>();
@@ -104,17 +103,12 @@ public class LlanquihueTour {
         ArrayList<GrupoTuristico> tourAvanzado = GestionFiltro.filtrar(baseDatosGruposTuristicos,
                 grupo -> grupo.getDificultad() == GrupoTuristico.Dificultad.AVANZADO);
 
-        //Agregar registro
-
-        Scanner registros = new Scanner(System.in);
-
-        TipoEntidad destinoSeleccionado = AgregarRegistro.seleccionarEntidad(registros);
-
-        if (destinoSeleccionado != null) {
-            GestorRegistro.registrarNuevaEntidad(destinoSeleccionado,registros);
-        }
-
-
+        //Edición del sistema
+        var teclado = new Scanner(System.in);
+        System.out.println("Iniciando el sistema de gestión de Llanquihue tour...\n");
+        MenuPrincipal.iniciarMenuPrincipal(teclado);
+        teclado.close();
+        System.out.println("Saliendo del sistema de registros");
 
         //Salida de datos
 

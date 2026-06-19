@@ -1,10 +1,7 @@
 package data;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 
 /**
  * Clase utilitaria encargada de la gestión y lectura de datos desde archivos de texto.
@@ -22,14 +19,14 @@ public class GestorDatos {
      * @return Un {@code ArrayList<String>} que contiene cada línea del texto del archivo como un elemento.
      */
 
-    public static ArrayList<String> cargarDatos(String nombreArchivo) {
-        File archivo = new File("resource",nombreArchivo);
+    public static ArrayList<String> cargarDatos(String rutaArchivo) {
+        File archivo = new File(rutaArchivo);
         ArrayList<String> datos = new ArrayList<>();
 
 
         if (archivo.exists() &&  archivo.length() > 0) {
 
-            try (BufferedReader lectorArchivo = new BufferedReader(new FileReader(archivo))) {
+            try (BufferedReader lectorArchivo = new BufferedReader(new FileReader(rutaArchivo))) {
                 String linea;
 
                 while ((linea = lectorArchivo.readLine()) != null) {
@@ -67,4 +64,30 @@ public class GestorDatos {
         }
         return registros;
     }
+
+    public static void guardarRegistro(String rutaArchivo, String registro) {
+        try (BufferedWriter escrito = new BufferedWriter(new FileWriter(rutaArchivo, true))) {
+            escrito.write(registro);
+            escrito.newLine();
+
+            System.out.println("[ÉXITO] Registro realizado exitosamente en la base de datos: " + rutaArchivo);
+
+        } catch (IOException ex) {
+            System.out.println("[ERROR CRÍTICO] Falla en la escrita del disco: " + ex.getMessage());
+        }
+    }
+
+    public static void sobrescribirBaseDatos(String rutaArchivo, ArrayList<String> registrosBaseDatos) {
+
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaArchivo,false))) {
+            for (String registro : registrosBaseDatos) {
+                escritor.write(registro);
+                escritor.newLine();
+            }
+        } catch (IOException e) {
+            System.out.println("No se puede sobrescribir a la base de datos");
+        }
+    }
 }
+
+
