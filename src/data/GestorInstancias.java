@@ -97,6 +97,8 @@ public class  GestorInstancias {
         ArrayList<Turista> baseDatosTuristas = new ArrayList<>();
         Random contadorAleatorio = new Random();
 
+        final int CUPOS_MAXIMOS_POR_GRUPO = 10;
+
         for (var partes:DatosTuristas) {
             Rut rut = new Rut(partes[4]);
             Direccion direccion = new Direccion(partes[5],partes[6],partes[7], Direccion.Region.valueOf(partes[8]));
@@ -107,15 +109,22 @@ public class  GestorInstancias {
             int indiceAleatorio = contadorAleatorio.nextInt(baseDatosGruposTuristicos.size());
             GrupoTuristico tourElegido = baseDatosGruposTuristicos.get(indiceAleatorio);
 
+            do{
+                indiceAleatorio = contadorAleatorio.nextInt(baseDatosGruposTuristicos.size());
+                tourElegido = baseDatosGruposTuristicos.get(indiceAleatorio);
+            }
+            while(tourElegido.getParticipantesInscritos() >= CUPOS_MAXIMOS_POR_GRUPO);
+
+            //Instancia de turista
+
             Turista nuevoTurista = new Turista(partes[0],partes[1],partes[2],partes[3],rut,direccion,
                     partes[9],Integer.parseInt(partes[10]),tourElegido);
 
             baseDatosTuristas.add(nuevoTurista);
+
+            tourElegido.inscribirParticipante(nuevoTurista);
         }
 
-        for (Turista turistaInscrito : baseDatosTuristas) {
-            turistaInscrito.getGrupoTuristico().inscribirParticipante(turistaInscrito);
-        }
         return baseDatosTuristas;
     }
 }

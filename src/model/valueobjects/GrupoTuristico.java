@@ -132,7 +132,10 @@ public class GrupoTuristico {
         this.participantes[this.participantesInscritos] = nuevoCliente;
         this.participantesInscritos++;
     }
-    
+
+    public int getParticipantesInscritos() {
+        return participantesInscritos;
+    }
 
     //Metodos de [Horario]
 
