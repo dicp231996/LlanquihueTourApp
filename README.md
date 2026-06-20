@@ -37,7 +37,7 @@ src/
 |   |    └── AgregarRegistro.java
 |   └── removedata/
 |       └── QuitarRegistro.java
-└── ui/
+└── app/
     └── LlanquihueTour.java
  
 ## Cómo ejecutar
