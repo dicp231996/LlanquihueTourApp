@@ -11,7 +11,20 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Actúa como un Mapeador de Datos (Data Mapper) y Fábrica de Objetos para el sistema.
+ * Su responsabilidad es solicitar los datos crudos a {@link GestorDatos}, procesar las cadenas
+ * de texto y ensamblar las colecciones de objetos de dominio con sus respectivas relaciones.
+ */
+
 public class  GestorInstancias {
+
+    /**
+     * Extrae los registros del archivo de guías y construye una lista de objetos {@code GuiaTuristico}.
+     * Instancia internamente los objetos de valor asociados, como {@code Rut} y {@code Direccion}.
+     *
+     * @return Un {@code ArrayList<GuiaTuristico>} puro, listo para ser consumido por la capa de lógica o interfaz.
+     */
 
     public static ArrayList<GuiaTuristico> ensamblarGuiasTuristas () {
         var lineasGuiasTuristicosDB = GestorDatos.cargarDatos(TipoEntidad.GUIA.getRutaArchivo());
@@ -31,12 +44,26 @@ public class  GestorInstancias {
         return baseDatosGuias;
     }
 
+    /**
+     * Construye la lista de objetos {@code GrupoTuristico}.
+     * Para garantizar la integridad del algoritmo, este método invoca primero a
+     * {@link #ensamblarGuiasTuristas()} para inyectar una instancia real de guía en cada grupo.
+     * <p>
+     * <b>Nota de Arquitectura (Entorno de Prueba):</b> Actualmente, la asignación entre guías y grupos
+     * se realiza de forma secuencial (1 a 1) utilizando un contador. Esta estructura es solo temporal, ya que depende que ambas listas
+     * tengan el mismo tamaño, eventualmente se agregaran nuevas funciones para realizar una asignacion más adecuada para un caso real.
+     * </p>
+     *
+     * @return Un {@code ArrayList<GrupoTuristico>} con sus respectivos guías asignados en memoria.
+     */
+
     public static ArrayList<GrupoTuristico> ensamblarGruposTuristicos () {
         var lineasGruposTuristicosDB = GestorDatos.cargarDatos(TipoEntidad.GRUPO.getRutaArchivo());
         var datosGruposTours = GestorDatos.registroInstancias(lineasGruposTuristicosDB);
 
         ArrayList<GuiaTuristico> baseDatosGuias = ensamblarGuiasTuristas();
         ArrayList<GrupoTuristico> baseDatosGruposTuristicos = new ArrayList<>();
+        //Los guias se asignan a los grupos de manera 1 a 1, es decir, el guia 0 pertenece al grupo 0, esta estructura es solo de prueba.
         int contador = 0;
         for (var partes:datosGruposTours) {
 
@@ -48,6 +75,19 @@ public class  GestorInstancias {
         }
         return baseDatosGruposTuristicos;
     }
+
+    /**
+     * Ensambla la colección de objetos {@code Turista}.
+     * Este método invoca a {@link #ensamblarGruposTuristicos()} para asignar un tour a cada turista
+     * y genera una relación bidireccional al registrar al turista dentro del grupo seleccionado.
+     * <p>
+     * <b>Nota de Arquitectura (Entorno de Prueba):</b> La asignación a los grupos turísticos se realiza
+     * de manera no determinista (aleatoria). Eventualemnte se implementarán identificadores relacionales
+     * para mapear la asignación exacta desde la base de datos.
+     * </p>
+     *
+     * @return Un {@code ArrayList<Turista>} completamente poblado y vinculado a sus respectivos grupos.
+     */
 
     public static ArrayList<Turista> ensamblarTuristas () {
         var lineasTuristasDB = GestorDatos.cargarDatos(TipoEntidad.TURISTA.getRutaArchivo());
@@ -61,6 +101,9 @@ public class  GestorInstancias {
             Rut rut = new Rut(partes[4]);
             Direccion direccion = new Direccion(partes[5],partes[6],partes[7], Direccion.Region.valueOf(partes[8]));
 
+
+            //La asignacion a los grupos turisticos se realiza de manera aleatoria a modo de prueba, en futuras versiones se agregarán atributos dentro de la clase
+            //para garantizar un funcionamiento optimo del sistema.
             int indiceAleatorio = contadorAleatorio.nextInt(baseDatosGruposTuristicos.size());
             GrupoTuristico tourElegido = baseDatosGruposTuristicos.get(indiceAleatorio);
 

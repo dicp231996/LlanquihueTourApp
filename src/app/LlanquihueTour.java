@@ -7,9 +7,10 @@ import util.MenuPrincipal;
 
 /**
  * Clase principal que actúa como punto de entrada de la aplicación LlanquihueTour.
- * Simula un sistema de gestión turística, instanciando guías, turistas y grupos de viaje
- * mediante datos de prueba ("Pseudo bases de datos"), para luego mostrar un resumen de los
- * grupos y sus participantes en consola.
+ * Simula un sistema de gestión turística por medio de la clase menu principal, la que permite
+ * agregar registros.
+ * quitar registros.
+ * filtrar.
  * @author Daniel Campos
  * @version 2.0.0
  */
@@ -18,8 +19,7 @@ public class LlanquihueTour {
 
     /**
      * Método principal que ejecuta la lógica de la aplicación.
-     * Crea arreglos de datos simulados para generar objetos de dominio y muestra
-     * la información resultante de los grupos turísticos configurados.
+     * gestionada desde la clase MenuPrincipal.
      *
      * @param args Argumentos de la línea de comandos (no utilizados en esta implementación).
      */

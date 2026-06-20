@@ -64,7 +64,16 @@ public class GestorDatos {
         }
         return registros;
     }
-
+    /**
+     * Agrega un nuevo registro al final de un archivo de texto especificado.
+     * Este método abre el archivo en modo de adición (append = true), lo que garantiza
+     * que la información existente no sea alterada ni eliminada.
+     * Si ocurre un error físico en el disco durante la operación, la excepción es capturada
+     * y reportada en la consola sin detener la ejecución del programa.
+     *
+     * @param rutaArchivo La ruta relativa o absoluta del archivo de destino (ej. "resource/turistas.txt").
+     * @param registro    La cadena de texto formateada (separada por delimitadores) que se inyectará en el archivo.
+     */
     public static void guardarRegistro(String rutaArchivo, String registro) {
         try (BufferedWriter escrito = new BufferedWriter(new FileWriter(rutaArchivo, true))) {
             escrito.write(registro);
@@ -76,7 +85,15 @@ public class GestorDatos {
             System.out.println("[ERROR CRÍTICO] Falla en la escrita del disco: " + ex.getMessage());
         }
     }
-
+    /**
+     * Sobrescribe por completo el contenido de un archivo de texto con una nueva lista de registros.
+     * Este método es destructivo: abre el archivo en modo de sobrescritura (append = false),
+     * eliminando todo el contenido anterior para reemplazarlo línea por línea con los elementos
+     * de la lista proporcionada. Es el motor principal para las operaciones de eliminación y edición.
+     *
+     * @param rutaArchivo        La ruta relativa o absoluta del archivo que será sobrescrito.
+     * @param registrosBaseDatos Un {@code ArrayList<String>} que contiene la base de datos actualizada en la memoria RAM.
+     */
     public static void sobrescribirBaseDatos(String rutaArchivo, ArrayList<String> registrosBaseDatos) {
 
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(rutaArchivo,false))) {

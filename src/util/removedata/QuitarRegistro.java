@@ -5,8 +5,28 @@ import util.core.metadata.TipoEntidad;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * Clase utilitaria encargada de gestionar la operación de eliminación (Delete) dentro del ciclo CRUD.
+ * Proporciona una interfaz interactiva por consola para que el usuario visualice los registros
+ * actuales de una entidad específica, seleccione un elemento mediante un índice numérico,
+ * y lo elimine de forma permanente de la base de datos física.
+ */
 public class QuitarRegistro {
+    /**
+     * Ejecuta el flujo interactivo de eliminación de registros.
+     * <p>
+     * El método extrae la totalidad de los datos desde el archivo físico hacia la memoria RAM
+     * ({@code ArrayList}). Posteriormente, despliega un menú en bucle que lista los registros numerados.
+     * Al recibir un índice válido por parte del usuario, el método remueve el elemento de la colección
+     * en memoria e invoca inmediatamente a {@link GestorDatos#sobrescribirBaseDatos(String, ArrayList)}
+     * para aplicar una mutación destructiva en el disco, garantizando la sincronización de los datos.
+     * </p>
+     *
+     * @param entidad El enumerador {@link TipoEntidad} que define la base de datos operativa y
+     * proporciona la ruta del archivo físico a modificar.
+     * @param teclado La instancia de {@code Scanner} utilizada para capturar la selección del índice
+     * o el comando de salida por parte del usuario.
+     */
 
     public static void eliminarRegistro(TipoEntidad entidad, Scanner teclado) {
         String rutaArchivo = entidad.getRutaArchivo();
