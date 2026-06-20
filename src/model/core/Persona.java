@@ -206,7 +206,7 @@ public abstract class Persona {
     @Override
     public String toString() {
         StringBuilder reporte = new StringBuilder();
-        reporte.append("=== Datos de alojamiento ===\n");
+        reporte.append("\n=== Datos personales ===\n");
         reporte.append("Nombre completo: ").append(this.nombres).append(" ").append(this.apellidoPaterno).append(" ").append(this.apellidoMaterno).append("\n");
         reporte.append("Nacionalidad: ").append(this.nacionalidad).append("\n");
         reporte.append("Rut: ").append(this.rut).append("\n");

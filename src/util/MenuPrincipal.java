@@ -20,7 +20,7 @@ public class MenuPrincipal {
             System.out.println("\t2. Eliminar un registro");
             System.out.println("\t3. Filtrar datos");
             System.out.println("\t4. Salir del sistema\n");
-            System.out.println("Selecciona la operación que quieres realizar (1,2 o 3): ");
+            System.out.println("Selecciona la operación que quieres realizar (del 1 al 3) (Preciona 4 para salir): ");
 
             String opcion = teclado.nextLine().trim();
 

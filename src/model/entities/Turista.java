@@ -158,7 +158,7 @@ public class Turista extends Persona {
         
         reporte.append("=== Datos de alojamiento ===\n");
         reporte.append("Habitación: ").append(this.habitacionReservada).append("\n");
-        reporte.append("Días de resercavión: ").append(this.diasReserva).append("\n");
+        reporte.append("Días de reservavión: ").append(this.diasReserva).append("\n");
         
         reporte.append("\n=== Datos del tour contratado ===\n");
         reporte.append("Destino del tour: ").append(this.grupoTuristico.getDestino());

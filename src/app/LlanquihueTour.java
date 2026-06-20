@@ -11,7 +11,7 @@ import util.MenuPrincipal;
  * mediante datos de prueba ("Pseudo bases de datos"), para luego mostrar un resumen de los
  * grupos y sus participantes en consola.
  * @author Daniel Campos
- * @version 1.2.0
+ * @version 2.0.0
  */
 
 public class LlanquihueTour {
@@ -33,7 +33,6 @@ public class LlanquihueTour {
         MenuPrincipal.iniciarMenuPrincipal(teclado);
         teclado.close();
         System.out.println("Saliendo del sistema de registros");
-
 
     }
 }

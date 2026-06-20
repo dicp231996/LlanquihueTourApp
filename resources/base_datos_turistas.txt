@@ -31,4 +31,4 @@ Tomas Eduardo;Bustos;Oyarzun;Chilena;13.000.111-2;Colon;888;Talca;MAULE;B204;2
 Daniel Ignacio;Campos;Pérez;Chilena;19.284.616-1;Gonzalo Bulnes;2544;Quinta Normal;SANTIAGO;E500;15
 daniel;campos;perez;chilena;19.284.616-1;gonzalo bulnes;2544;quinta normal;SANTIAGO;e500;15
 karina;epullanca;melo;chilena;11.156.456-8;dorsal;24;renca;SANTIAGO;a100;15
-daniel;campos;perez;chilena;19.284.616-1;gonzalo bulnes 2544;2544;quinta normal;SANTIAGO;a100;15
+Michelle Ivonne;Peña;Mejias;Chilena;19.745.852-4;Neptuno;4568;Lo Prado;SANTIAGO;d478;12

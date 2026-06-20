@@ -111,9 +111,10 @@ public class MenuConsultas {
             return;
         }
 
-        System.out.println("\n====== Resultados de la busqueda ======");
+        System.out.println("\n====== Resultados de la busqueda ======\n");
         for (T registro : resultado) {
             System.out.println(registro.toString());
+            System.out.println("\n---------------------------------\n");
         }
     }
 }
