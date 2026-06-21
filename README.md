@@ -1,6 +1,6 @@
 # LlanquihueTourApp
 Versión 2.0.0 de la aplicación para Llanquihue tour, se añaden clase que permite leer datos desde archivos txt y procesarlos para crear instancias de las clases de entities
-# LlanquihueTourApp1.3.0
+# LlanquihueTourApp2.0.0
 # LlanquihueTour
  
 ## Descripción
