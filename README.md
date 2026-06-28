@@ -7,44 +7,54 @@ Versión 2.0.0 de la aplicación para Llanquihue tour, se añaden clase que perm
 Proyecto Java orientado a objetos para representar la compocision y herencia de clases
  
 ## Estructura
-resourses/
-|── base_datos_guias_turisticos.txt
-|── base_datos_tours.txt
-└──base_datos_turistas.txt
-src/
-|── data/
-|   |── GestionFiltro.java
-|   |── GestorInstancias.java
-|   └── GestorDatos.java
+├── resources/
+│   ├── base_datos_avistamiento.txt
+│   ├── base_datos_guias_turisticos.txt
+│   ├── base_datos_paseos_lacustres.txt
+│   ├── base_datos_ruta_patrimonial.txt
+│   ├── base_datos_tours.txt
+│   ├── base_datos_trekking.txt
+│   └── base_datos_turistas.txt
+└── src/
+├── app/
+│   └── LlanquihueTour.java
+├── data/
+│   ├── GestionFiltro.java
+│   ├── GestorDatos.java
+│   └── GestorInstancias.java
 ├── model/
 │   ├── core/
-|   |   └── Persona.java
+│   │   ├── Persona.java
+│   │   └── ServicioTuristico.java
 │   ├── entities/
-|   |   |── GuiaTuristico.java
-|   |   └──Turista.java
+│   │   ├── actors/
+│   │   │   ├── GuiaTuristico.java
+│   │   │   └── Turista.java
+│   │   └── services/
+│   │       ├── AvistamientoHumedales.java
+│   │       ├── PaseoLacustre.java
+│   │       ├── RutaPatrimonial.java
+│   │       └── TrekkingAltaMontania.java
 │   └── valueobjects/
-|       |── Direccion.java
-|       |── GrupoTuristico.java
-|       └──Rut.java
-|── util/
-|   ├── core/
-|   |   |── metadata/ 
-|   |   |   |── Campo.java
-|   |   |   |── TipoDato.java
-|   |   |   └── TipoEntidad.java
-|   |   |── rules/
-|   |   |   └── GestorValidacion.java
-|   |   └── ui/
-|   |       └── GestorValidaciones.java
-|   ├── queries/
-|   |   └── MenuConsultas.java
-|   ├── adddata/
-|   |    └── AgregarRegistro.java
-|   |── removedata/
-|   |   └── QuitarRegistro.java
-|   └── MenuPrincipal.java
-└── app/
-    └── LlanquihueTour.java
+│       ├── Direccion.java
+│       ├── GrupoTuristico.java
+│       └── Rut.java
+└── util/
+├── adddata/
+│   └── AgregarRegistros.java
+├── core/
+│   ├── metadata/
+│   │   ├── Campo.java
+│   │   ├── TipoDato.java
+│   │   └── TipoEntidad.java
+│   └── rules/
+│       └── GestorValidaciones.java
+├── queries/
+│   └── MenuConsultas.java
+├── removedata/
+├── ui/
+│   └── SelectorBaseDatos.java
+└── MenuPrincipal.java
  
 ## Cómo ejecutar
 Abrir el proyecto en IntelliJ IDEA y ejecutar la clase LlanquihueTour ubicada en el paquete app.
