@@ -1,8 +1,10 @@
 package util.core.rules;
 
+import model.entities.services.AvistamientoHumedales;
 import model.valueobjects.Direccion.Region;
-import model.valueobjects.GrupoTuristico.Dificultad;
-import model.entities.GuiaTuristico.NivelDeIngles;
+import model.core.ServicioTuristico.Dificultad;
+import model.entities.services.AvistamientoHumedales.EstacionRecomendada;
+import model.entities.actors.GuiaTuristico.NivelDeIngles;
 import util.core.metadata.TipoDato;
 
 /**
@@ -66,6 +68,13 @@ public class GestorValidaciones {
             case DIFICULTAD:
                 try {
                     Dificultad.valueOf(entrada.toUpperCase());
+                    return true;
+                } catch (IllegalArgumentException e) {
+                    return false;
+                }
+            case ESTACION_RECOMENDADA:
+                try {
+                    EstacionRecomendada.valueOf(entrada.toUpperCase());
                     return true;
                 } catch (IllegalArgumentException e) {
                     return false;

@@ -1,12 +1,17 @@
 package util.adddata;
 
+import data.GestorInstancias;
+import model.valueobjects.GrupoTuristico;
 import util.core.metadata.Campo;
 import util.core.metadata.TipoDato;
 import util.core.metadata.TipoEntidad;
 import data.GestorDatos;
 import util.core.rules.GestorValidaciones;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import static data.GestorInstancias.ensamblarGruposTuristicos;
 
 /**
  * Clase utilitaria encargada de gestionar la creación e inserción de nuevos registros en el sistema.
@@ -38,18 +43,33 @@ public class AgregarRegistros {
             Campo campoRegistro = esquema[i];
             String entradaDato = "";
 
-            while (true) {
-                System.out.print(campoRegistro.getPregunta() + ": ");
-                entradaDato = teclado.nextLine().trim();
+            if (campoRegistro.getTipoRegla() == TipoDato.SELECCION_TOUR_INTERACTIVO) {
+                System.out.println("\n" + campoRegistro.getPregunta());
+                ArrayList<String> opciones = GestorInstancias.obtenerOpcionesTours();
 
-                if (GestorValidaciones.datoValido(campoRegistro.getTipoRegla(), entradaDato)) {
-                    break;
+                for (int j = 0; j < opciones.size(); j++) {
+                    System.out.println((j + 1) + ". " + opciones.get(j));
                 }
-                else {
-                    System.out.println("Error: El dato no cumple con el formato requerido" + campoRegistro.getTipoRegla().name() + ".");
+
+                System.out.println("Seleccione el tour que desea contratar:");
+                int eleccion = Integer.parseInt(teclado.nextLine().trim());
+                String opcionSeleccionada = opciones.get(eleccion - 1);
+
+                entradaDato = GestorInstancias.extraerIdGrupoSeleccionado(opcionSeleccionada);
+            }
+            else {
+                while (true) {
+                    System.out.print(campoRegistro.getPregunta());
+                    entradaDato = teclado.nextLine().trim();
+
+                    if (GestorValidaciones.datoValido(campoRegistro.getTipoRegla(), entradaDato)) {
+                        break;
+                    }
+                    else {
+                        System.out.println("Error: El dato no cumple con el formato requerido" + campoRegistro.getTipoRegla().name() + ".");
+                    }
                 }
             }
-
             if (campoRegistro.getTipoRegla() == TipoDato.REGION || campoRegistro.getTipoRegla() == TipoDato.NIVEL_INGLES || campoRegistro.getTipoRegla() == TipoDato.DIFICULTAD) {
                 entradaDato = entradaDato.toUpperCase();
             }

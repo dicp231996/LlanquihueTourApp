@@ -1,33 +1,33 @@
-Daniel Ignacio;Campos;Pérez;Chilena;12.345.678-5;21 de Mayo;150;Arica;ARICA;D405;4
-Catalina Jaqueline;Espinoza;Valenzuela;Chilena;19.876.543-0;Av. Brasil;890;Antofagasta;ANTOFAGASTA;B202;5
-Vicente Andres;Espinoza;Muñoz;Chilena;21.334.556-k;Francisco de Aguirre;405;La serena;LA_SERENA;A113;6
-Katherine Alejandra;Gacitua;Huerta;Chilena;15.998.112-4;Av. Libertad;1200;Viña del Mar;VALPARAISO;E505;7
-Mical Febe;Venegas;Epullanca;Chilena;17.443.221-8;Av. Pedro de Valdivia;33;Providencia;SANTIAGO;C308;8
-Nadiezdha Scarlett;Zapata;Norambuena;Chilena;11.223.344-5;Barros Arena;550;Concepción;CONCEPCION;D403;2
-Zachenzka Janet;Zalem;Castillo;Chilena;20.556.778-9;Av. Alemania;102;Temuco;TEMUCO;A103;8
-Jezhiel Jimena;Jimenez;Ramos;Chilena;14.112.233-1;Los Robles;300;Valdivia;VALDIVIA;B208;6
-Pablo Andres;Quezada;Roa;Chilena;16.887.990-2;Baquedano;77;Coyhaique;COYHAIQUE;E500;15
-Nicolas;Urquiza;Cruz;Chilena;22.111.444-K;Bories;901;Punta Arenas;PUNTA_ARENAS;C315;3
-Juan Carlos;Soto;Araya;Chilena;15.123.456-7;Arturo Prat;123;Santiago;SANTIAGO;A101;3
-Maria Paz;Lagos;Mena;Chilena;16.234.567-8;San Martin;456;Concepción;CONCEPCION;B201;4
-Luis Alberto;Diaz;Silva;Chilena;17.345.678-9;O'Higgins;789;Valparaíso;VALPARAISO;C301;5
-Ana Luisa;Perez;Gonzalez;Chilena;18.456.789-0;Manuel Rodriguez;101;Rancagua;O_HIGGINS;D401;2
-Pedro Pablo;Gomez;Rojas;Chilena;19.567.890-1;Cochrane;202;Iquique;TARAPACA;E501;7
-Camila Andrea;Flores;Morales;Chilena;20.678.901-2;Blanco Encalada;303;Talca;MAULE;F601;1
-Diego Ignacio;Carrasco;Tapia;Chilena;21.789.012-3;Condell;404;Chillán;NUBLE;A102;4
-Valentina Ignacia;Reyes;Navarro;Chilena;22.890.123-4;Bulnes;505;Puerto Montt;PUERTO_MONTT;B202;6
-Matias Nicolas;Salazar;Fierro;Chilena;13.901.234-5;Caupolican;606;Temuco;TEMUCO;C302;3
-Fernanda Belen;Herrera;Salinas;Chilena;14.012.345-6;Maipu;707;Copiapó;ATACAMA;D402;8
-Javiera Paz;Aravena;Castro;Chilena;15.111.222-3;Lautaro;808;Valdivia;VALDIVIA;E502;5
-Felipe Andres;Vergara;Cortes;Chilena;16.222.333-4;Chacabuco;909;Antofagasta;ANTOFAGASTA;F602;2
-Constanza Belen;Molina;Sanhueza;Chilena;17.333.444-5;Latorre;111;Calama;ANTOFAGASTA;A103;4
-Sebastian Ignacio;Orellana;Fuentes;Chilena;18.444.555-6;Prat;222;La Serena;LA_SERENA;B203;7
-Francisca Javiera;Caceres;Vera;Chilena;19.555.666-7;Mackenna;333;Osorno;PUERTO_MONTT;C303;1
-Rodrigo Alejandro;Toro;Pino;Chilena;20.666.777-8;Freire;444;Curicó;MAULE;D403;9
-Daniela Andrea;Bravo;Pardo;Chilena;21.777.888-9;San Jose;555;Arica;ARICA;E503;3
-Ignacio Javier;Vargas;Maldonado;Chilena;22.888.999-0;Independencia;666;Punta Arenas;PUNTA_ARENAS;F603;4
-Paula Antonia;Sepulveda;Gajardo;Chilena;12.999.000-1;Victoria;777;Valparaíso;VALPARAISO;A104;5
-Tomas Eduardo;Bustos;Oyarzun;Chilena;13.000.111-2;Colon;888;Talca;MAULE;B204;2
-Michelle Ivonne;Peña;Mejias;Chilena;19.745.852-4;Neptuno;4568;Lo Prado;SANTIAGO;d478;12
-Ana Belen Alejandra;Campos;Pérez;Chilena;20.426.662-0;gonzalo bulnes;2544;quinta normal;SANTIAGO;a113;15
-Daniel;Campos;Perez;chilena;19.284.616-1;gonzalo bulnes;2544;quinta normal;SANTIAGO;a113;20
+Daniel Ignacio;Campos;Pérez;Chilena;12.345.678-5;21 de Mayo;150;Arica;ARICA;D405;4;GRP-001
+Catalina Jaqueline;Espinoza;Valenzuela;Chilena;19.876.543-0;Av. Brasil;890;Antofagasta;ANTOFAGASTA;B202;5;GRP-002
+Vicente Andres;Espinoza;Muñoz;Chilena;21.334.556-k;Francisco de Aguirre;405;La serena;LA_SERENA;A113;6;GRP-003
+Katherine Alejandra;Gacitua;Huerta;Chilena;15.998.112-4;Av. Libertad;1200;Viña del Mar;VALPARAISO;E505;7;GRP-004
+Mical Febe;Venegas;Epullanca;Chilena;17.443.221-8;Av. Pedro de Valdivia;33;Providencia;SANTIAGO;C308;8;GRP-005
+Nadiezdha Scarlett;Zapata;Norambuena;Chilena;11.223.344-5;Barros Arena;550;Concepción;CONCEPCION;D403;2;GRP-006
+Zachenzka Janet;Zalem;Castillo;Chilena;20.556.778-9;Av. Alemania;102;Temuco;TEMUCO;A103;8;GRP-007
+Jezhiel Jimena;Jimenez;Ramos;Chilena;14.112.233-1;Los Robles;300;Valdivia;VALDIVIA;B208;6;GRP-008
+Pablo Andres;Quezada;Roa;Chilena;16.887.990-2;Baquedano;77;Coyhaique;COYHAIQUE;E500;15;GRP-001
+Nicolas;Urquiza;Cruz;Chilena;22.111.444-K;Bories;901;Punta Arenas;PUNTA_ARENAS;C315;3;GRP-002
+Juan Carlos;Soto;Araya;Chilena;15.123.456-7;Arturo Prat;123;Santiago;SANTIAGO;A101;3;GRP-003
+Maria Paz;Lagos;Mena;Chilena;16.234.567-8;San Martin;456;Concepción;CONCEPCION;B201;4;GRP-004
+Luis Alberto;Diaz;Silva;Chilena;17.345.678-9;O'Higgins;789;Valparaíso;VALPARAISO;C301;5;GRP-005
+Ana Luisa;Perez;Gonzalez;Chilena;18.456.789-0;Manuel Rodriguez;101;Rancagua;O_HIGGINS;D401;2;GRP-006
+Pedro Pablo;Gomez;Rojas;Chilena;19.567.890-1;Cochrane;202;Iquique;TARAPACA;E501;7;GRP-007
+Camila Andrea;Flores;Morales;Chilena;20.678.901-2;Blanco Encalada;303;Talca;MAULE;F601;1;GRP-008
+Diego Ignacio;Carrasco;Tapia;Chilena;21.789.012-3;Condell;404;Chillán;NUBLE;A102;4;GRP-001
+Valentina Ignacia;Reyes;Navarro;Chilena;22.890.123-4;Bulnes;505;Puerto Montt;PUERTO_MONTT;B202;6;GRP-002
+Matias Nicolas;Salazar;Fierro;Chilena;13.901.234-5;Caupolican;606;Temuco;TEMUCO;C302;3;GRP-003
+Fernanda Belen;Herrera;Salinas;Chilena;14.012.345-6;Maipu;707;Copiapó;ATACAMA;D402;8;GRP-004
+Javiera Paz;Aravena;Castro;Chilena;15.111.222-3;Lautaro;808;Valdivia;VALDIVIA;E502;5;GRP-005
+Felipe Andres;Vergara;Cortes;Chilena;16.222.333-4;Chacabuco;909;Antofagasta;ANTOFAGASTA;F602;2;GRP-006
+Constanza Belen;Molina;Sanhueza;Chilena;17.333.444-5;Latorre;111;Calama;ANTOFAGASTA;A103;4;GRP-007
+Sebastian Ignacio;Orellana;Fuentes;Chilena;18.444.555-6;Prat;222;La Serena;LA_SERENA;B203;7;GRP-008
+Francisca Javiera;Caceres;Vera;Chilena;19.555.666-7;Mackenna;333;Osorno;PUERTO_MONTT;C303;1;GRP-001
+Rodrigo Alejandro;Toro;Pino;Chilena;20.666.777-8;Freire;444;Curicó;MAULE;D403;9;GRP-002
+Daniela Andrea;Bravo;Pardo;Chilena;21.777.888-9;San Jose;555;Arica;ARICA;E503;3;GRP-003
+Ignacio Javier;Vargas;Maldonado;Chilena;22.888.999-0;Independencia;666;Punta Arenas;PUNTA_ARENAS;F603;4;GRP-004
+Paula Antonia;Sepulveda;Gajardo;Chilena;12.999.000-1;Victoria;777;Valparaíso;VALPARAISO;A104;5;GRP-005
+Tomas Eduardo;Bustos;Oyarzun;Chilena;13.000.111-2;Colon;888;Talca;MAULE;B204;2;GRP-006
+Michelle Ivonne;Peña;Mejias;Chilena;19.745.852-4;Neptuno;4568;Lo Prado;SANTIAGO;d478;12;GRP-007
+Ana Belen Alejandra;Campos;Pérez;Chilena;20.426.662-0;gonzalo bulnes;2544;quinta normal;SANTIAGO;a113;15;GRP-008
+Daniel;Campos;Perez;chilena;19.284.616-1;gonzalo bulnes;2544;quinta normal;SANTIAGO;a113;20;GRP-001

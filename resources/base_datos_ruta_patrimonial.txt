@@ -1,0 +1,2 @@
+PAT-001;Circuito Cuenca del Lago Llanquihue;9;0;18;30;35000;INTERMEDIO;true;true;4
+PAT-002;Teatro del Lago y Frutillar;15;45;18;15;18000;PRINCIPIANTE;false;false;2

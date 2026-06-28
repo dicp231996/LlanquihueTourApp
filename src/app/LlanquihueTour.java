@@ -2,6 +2,7 @@ package app;
 
 import java.util.Scanner;
 
+import data.GestorInstancias;
 import util.MenuPrincipal;
 
 
@@ -12,7 +13,7 @@ import util.MenuPrincipal;
  * quitar registros.
  * filtrar.
  * @author Daniel Campos
- * @version 2.0.0
+ * @version 3.0.0
  */
 
 public class LlanquihueTour {
@@ -26,6 +27,8 @@ public class LlanquihueTour {
 
 
     public static void main(String[] args) {
+
+        GestorInstancias.ensamblarTuristas();
 
         //Menù principal
         var teclado = new Scanner(System.in);

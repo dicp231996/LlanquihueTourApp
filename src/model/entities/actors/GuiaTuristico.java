@@ -1,4 +1,4 @@
-package model.entities;
+package model.entities.actors;
 
 import model.core.Persona;
 import model.valueobjects.Direccion;
@@ -18,6 +18,7 @@ public class GuiaTuristico extends Persona {
     private String especialidad;
     private boolean certificadoPrimerosAuxilios;
     private boolean capacitacionRescate;
+    private String numeroEmpleado;
 
     /**
      * Enumerador que define los niveles de dominio del idioma inglés,
@@ -62,6 +63,7 @@ public class GuiaTuristico extends Persona {
         this.especialidad = "Guia general";
         this.certificadoPrimerosAuxilios = false;
         this.capacitacionRescate = false;
+        this.numeroEmpleado = "GT-001";
     }
 
     //Constructor con atributos
@@ -81,12 +83,14 @@ public class GuiaTuristico extends Persona {
      * @param capacitacionRescate         Indica si el guía cuenta con capacitación formal para rescates (true/false).
      */
     
-    public GuiaTuristico(String nombres, String apellidoPaterno, String apellidoMaterno, String nacionalidad, Rut rut, Direccion direccion, NivelDeIngles nivelDeIngles, String especialidad, boolean certificadoPrimerosAuxilios, boolean capacitacionRescate) {
+    public GuiaTuristico(String nombres, String apellidoPaterno, String apellidoMaterno, String nacionalidad, Rut rut, Direccion direccion,
+                         NivelDeIngles nivelDeIngles, String especialidad, boolean certificadoPrimerosAuxilios, boolean capacitacionRescate, String numeroEmpleado) {
          super(nombres, apellidoPaterno, apellidoMaterno, nacionalidad, rut, direccion);
          this.setNivelDeIngles(nivelDeIngles);
          this.setEspecialidad(especialidad);
          this.setCertificadoPrimerosAuxilios(certificadoPrimerosAuxilios);
          this.setCapacitacionRescate(capacitacionRescate);
+         this.setNumeroEmpleado(numeroEmpleado);
      }
     
     //Metodos para el atributo [nivel de ingles]
@@ -184,6 +188,16 @@ public class GuiaTuristico extends Persona {
     public void setCapacitacionRescate(boolean capacitacionRescate) {
         this.capacitacionRescate = capacitacionRescate;
     }
+
+    //Metodos de numero de empleado
+
+    public String getNumeroEmpleado() {
+        return numeroEmpleado;
+    }
+
+    public void setNumeroEmpleado(String numeroEmpleado) {
+        this.numeroEmpleado = numeroEmpleado;
+    }
     
     //Instancia de objeto
 
@@ -200,13 +214,15 @@ public class GuiaTuristico extends Persona {
         String datosPersonales = super.toString();
         
         StringBuilder reporte = new StringBuilder();
-        reporte.append(datosPersonales).append("\n");
-        reporte.append("=== Datos de formación ===\n");
+        reporte.append(datosPersonales);
+        reporte.append("Numero de empleado: ").append(this.numeroEmpleado).append("\n");
+        reporte.append("\n=== Datos de formación ===\n");
         
         reporte.append("Nivel de inglés: ").append(this.nivelDeIngles.nivelDeIngles).append("\n");
         reporte.append("Especialidad: ").append(this.especialidad).append("\n");
         reporte.append("Certificado de primeros auxilios: ").append((this.certificadoPrimerosAuxilios ? "Cuenta con certificación" : "No cuenta con certificación")).append("\n");
         reporte.append("Esta capacitado para rescate: ").append((this.capacitacionRescate ? "Cuenta con certificación" : "No cuenta con certificación"));
+        ;
         
         return reporte.toString();
     }

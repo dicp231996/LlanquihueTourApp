@@ -51,6 +51,10 @@ public enum TipoDato {
      * Representa el nivel de exigencia técnica de una actividad.
      * La entrada debe ser convertible al enumerador de dificultad definido en los grupos turísticos.
      */
-    DIFICULTAD
+    DIFICULTAD,
+
+    ESTACION_RECOMENDADA,
+
+    SELECCION_TOUR_INTERACTIVO
 
 }

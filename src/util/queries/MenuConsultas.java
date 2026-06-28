@@ -2,8 +2,12 @@ package util.queries;
 
 import data.GestionFiltro;
 import data.GestorInstancias;
-import model.entities.GuiaTuristico;
-import model.entities.Turista;
+import model.entities.actors.GuiaTuristico;
+import model.entities.actors.Turista;
+import model.entities.services.AvistamientoHumedales;
+import model.entities.services.PaseoLacustre;
+import model.entities.services.RutaPatrimonial;
+import model.entities.services.TrekkingAltaMontania;
 import model.valueobjects.GrupoTuristico;
 import util.core.metadata.TipoEntidad;
 
@@ -82,22 +86,26 @@ public class MenuConsultas {
      * @param teclado La instancia de {@code Scanner} para capturar la opción deseada.
      */
     public static void ejecutarFiltroGruposTuristicos(Scanner teclado) {
-        System.out.println("\t1.- Mostrar tours con dificultad Avanzada");
-        System.out.println("\t2.- Mostrar tours con condiciòn física requerida");
+        System.out.println("\t1.- Mostrar tours de trekking en alta montaña");
+        System.out.println("\t2.- Mostrar tours de rutas patrimoniales");
+        System.out.println("\t3.- Mostrar tours de paseo lacustre");
+        System.out.println("\t4.- Mostrar tours de avistamiento en humedales");
         System.out.println("Selecciona uno de los siguientes criterios");
 
         String opcion = teclado.nextLine().trim();
         Predicate<GrupoTuristico> criterio = null;
 
-        if (opcion.equals("1")) {
-            criterio = grupo -> grupo.getDificultad() == GrupoTuristico.Dificultad.AVANZADO;
+        if  (opcion.equals("1")) {
+            criterio = grupoTuristico -> grupoTuristico.getActividad() instanceof TrekkingAltaMontania;
         }
         else if (opcion.equals("2")) {
-            criterio = grupo -> grupo.getCondicionFisicaRequerida() == true;
+            criterio = grupoTuristico -> grupoTuristico.getActividad() instanceof RutaPatrimonial;
         }
-        else  {
-            System.out.println("Opcion invalida");
-            return;
+        else if (opcion.equals("3")) {
+            criterio = grupoTuristico -> grupoTuristico.getActividad() instanceof PaseoLacustre;
+        }
+        else if (opcion.equals("4")) {
+            criterio = grupoTuristico -> grupoTuristico.getActividad() instanceof AvistamientoHumedales;
         }
 
         ArrayList<GrupoTuristico> baseDatosGruposTuristicos = GestorInstancias.ensamblarGruposTuristicos();
@@ -122,7 +130,7 @@ public class MenuConsultas {
         Predicate<Turista> criterio = null;
 
         if (opcion.equals("1")) {
-            criterio = turista -> !turista.getNacionalidad().equals("Chilena");
+            criterio = turista -> !turista.getNacionalidad().equalsIgnoreCase("Chilena");
         }
         else if (opcion.equals("2")) {
             criterio = turista -> turista.getDiasReserva() > 10;

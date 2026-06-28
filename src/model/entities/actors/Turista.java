@@ -1,6 +1,7 @@
-package model.entities;
+package model.entities.actors;
 
 import model.core.Persona;
+import model.core.ServicioTuristico;
 import model.valueobjects.Direccion;
 import model.valueobjects.GrupoTuristico;
 import model.valueobjects.Rut;
@@ -18,7 +19,7 @@ public class Turista extends Persona {
     
     private String habitacionReservada;
     private int diasReserva;
-    private GrupoTuristico grupoTuristico;
+    private ServicioTuristico tourContratado;
     
     //Constructor por defecto
 
@@ -32,7 +33,7 @@ public class Turista extends Persona {
         super();
         this.habitacionReservada = "Sin reservación";
         this.diasReserva = 0;
-        this.grupoTuristico = new GrupoTuristico();
+        this.tourContratado = null;
     }
     
     //Constructor con atributos
@@ -49,14 +50,15 @@ public class Turista extends Persona {
      * @param direccion           La dirección de procedencia del turista.
      * @param habitacionReservada El número o identificador de la habitación reservada.
      * @param diasReserva         La cantidad de días de alojamiento reservados.
-     * @param grupoTuristico      El grupo turístico al que se integra el turista.
+     * @param servicioTuristico      El grupo turístico al que se integra el turista.
      */
     
-    public Turista(String nombres, String apellidoPaterno, String apellidoMaterno,String nacionalidad, Rut rut, Direccion direccion, String habitacionReservada, int diasReserva, GrupoTuristico grupoTuristico) {
+    public Turista(String nombres, String apellidoPaterno, String apellidoMaterno,String nacionalidad, Rut rut, Direccion direccion,
+                   String habitacionReservada, int diasReserva, ServicioTuristico tourContratado) {
         super(nombres, apellidoPaterno, apellidoMaterno, nacionalidad, rut, direccion);
         this.setHabitacionReservada(habitacionReservada);
         this.setDiasReserva(diasReserva);
-        this.setGrupoTuristico(grupoTuristico);
+        this.setTourContratado(tourContratado);
     }
     
     //Metodos para el atributo [Habitación reservada]
@@ -120,8 +122,8 @@ public class Turista extends Persona {
      * @return El objeto {@link GrupoTuristico} asociado.
      */
     
-    public GrupoTuristico getGrupoTuristico() {
-        return grupoTuristico;
+    public ServicioTuristico getTourContratado() {
+        return tourContratado;
     }
 
     /**
@@ -131,11 +133,16 @@ public class Turista extends Persona {
      * @throws IllegalArgumentException si el grupo proporcionado es nulo.
      */
     
-    public void setGrupoTuristico(GrupoTuristico grupo) {
-        if (grupo == null) {
-            throw new IllegalArgumentException("Grupo pendiente de asignación");
+    public void setTourContratado(ServicioTuristico tourContratado) {
+        this.tourContratado = tourContratado;
+    }
+
+    public void vincularGrupo(GrupoTuristico grupoTuristico) {
+        if (grupoTuristico == null) {
+            throw new IllegalArgumentException("Grupo no puede asignar");
         }
-        this.grupoTuristico = grupo;
+        grupoTuristico.inscribirParticipante(this);
+        this.tourContratado = grupoTuristico.getActividad();
     }
     
     //Instancia de objeto
@@ -159,10 +166,13 @@ public class Turista extends Persona {
         reporte.append("=== Datos de alojamiento ===\n");
         reporte.append("Habitación: ").append(this.habitacionReservada).append("\n");
         reporte.append("Días de reservavión: ").append(this.diasReserva).append("\n");
-        
-        reporte.append("\n=== Datos del tour contratado ===\n");
-        reporte.append("Destino del tour: ").append(this.grupoTuristico.getDestino());
-        
+
+        if(this.tourContratado != null){
+            reporte.append("\n").append(this.tourContratado.toString()).append("\n");
+        }
+        else {
+            reporte.append("Destino del tour contratado: [Sin tour contratado]\n");
+        }
         return reporte.toString();
     }
 }

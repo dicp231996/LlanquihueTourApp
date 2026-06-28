@@ -1,0 +1,2 @@
+TRK-001;Ascenso al Volcán Calbuco;6;0;19;0;55000;AVANZADO;2015;true
+TRK-002;Ascenso al volcán Osorno;13;30;16;0;45000;AVANZADO;2652;true
