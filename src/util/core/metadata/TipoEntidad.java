@@ -57,7 +57,7 @@ public enum TipoEntidad {
             new Campo("N° de empleado del guía asignado: ",TipoDato.TEXTO_LIBRE),
             new Campo("N° de servicio: ",TipoDato.TEXTO_LIBRE)
     }),
-    PASEO_LACUSTRE("resources/base_datos_paseos_lacustres.txt:", new Campo[]{
+    PASEO_LACUSTRE("resources/base_datos_paseos_lacustres.txt", new Campo[]{
             new Campo("ID de servicio: ", TipoDato.TEXTO_LIBRE),
             new Campo("Destino:",TipoDato.TEXTO_LIBRE),
             new Campo("Hora inicio (entre 0 a 23):",TipoDato.HORA),

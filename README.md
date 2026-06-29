@@ -47,17 +47,19 @@ Proyecto Java orientado a objetos para representar la compocision y herencia de 
 │   │   ├── Campo.java
 │   │   ├── TipoDato.java
 │   │   └── TipoEntidad.java
-│   └── rules/
-│       └── GestorValidaciones.java
+│   ├── rules/
+│   │   └── GestorValidaciones.java
+│   └── ui/
+│       └── SelectorBaseDatos.java
 ├── queries/
 │   └── MenuConsultas.java
 ├── removedata/
-├── ui/
-│   └── SelectorBaseDatos.java
+│   └── QuitarRegistro.java
 └── MenuPrincipal.java
  
 ## Cómo ejecutar
 Abrir el proyecto en IntelliJ IDEA y ejecutar la clase LlanquihueTour ubicada en el paquete app.
+Se abrira un menu interactivo por consola en donde se pueden agregar registros, quitarlos de la de datos elegida o filtrar todas las instancias por medio de queries.
 
 ## En la clase LlanquihueTour esta la clase MenuPrincipal, la cual nos permite interactuar con el sistema dandonos la opcion de agregar registros, eliminar registros o filtrar las bases de datos
  

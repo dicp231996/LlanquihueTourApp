@@ -31,3 +31,7 @@ Tomas Eduardo;Bustos;Oyarzun;Chilena;13.000.111-2;Colon;888;Talca;MAULE;B204;2;G
 Michelle Ivonne;Peña;Mejias;Chilena;19.745.852-4;Neptuno;4568;Lo Prado;SANTIAGO;d478;12;GRP-007
 Ana Belen Alejandra;Campos;Pérez;Chilena;20.426.662-0;gonzalo bulnes;2544;quinta normal;SANTIAGO;a113;15;GRP-008
 Daniel;Campos;Perez;chilena;19.284.616-1;gonzalo bulnes;2544;quinta normal;SANTIAGO;a113;20;GRP-001
+Daniel;Campos;Perez;Chilena;19.284.616-1;Gonzalo Bulnes;2544;Quinta Normal;SANTIAGO;a113;15;GRP-003
+Alejandro;Garrido;Canio;Chilena;20.154.613-7;General Prieto;4665;Independencia;SANTIAGO;e512;10;GRP-003
+Ida;Perez;Bravo;Chilena;13.029.917-2;Pasaje doce;4578;Quinta Normal;SANTIAGO;c324;10;GRP-003
+daniel;campos;perez;chilena;19.284.616-1;gonzalo bulnes;2544;quinta normal;SANTIAGO;a113;15;GRP-003
