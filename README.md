@@ -1,10 +1,11 @@
 # LlanquihueTourApp
 Versión 2.0.0 de la aplicación para Llanquihue tour, se añaden clase que permite leer datos desde archivos txt y procesarlos para crear instancias de las clases de entities
-# LlanquihueTourApp2.0.0
+# LlanquihueTourApp 3.0.0
 # LlanquihueTour
  
 ## Descripción
-Proyecto Java orientado a objetos para representar la compocision y herencia de clases
+Proyecto Java orientado a objetos para representar la compocision y herencia de clases.
+El contenido de esta actualizacion radica en la creación de una nueva super clase llamada ServicioTuristico, dicha clase hereda a 4 servicios [AvistamientoHumedales.java | PaseoLacustre.java | RutaPatrimonial.java | TrekkingAltaMontania.java] estas clases pasan a componer el Grupo turistico por medio de llaves foraneas que permiten mapear el grupo con la actividad concreta
  
 ## Estructura
 ├── resources/
